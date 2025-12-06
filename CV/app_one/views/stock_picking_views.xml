@@ -1,0 +1,14 @@
+<odoo>
+
+<record id="action_merge_pickings" model="ir.actions.server">
+    <field name="name">دمج أوامر الاستلام</field>
+    <field name="model_id" ref="model_stock_picking"/>
+    <field name="binding_model_id" ref="model_stock_picking"/>
+    <field name="binding_view_types">list</field>
+    <field name="state">code</field>
+    <field name="code">
+if records:
+    action = records._action_merge_pickings()
+</field>
+</record>
+</odoo>

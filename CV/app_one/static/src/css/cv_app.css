@@ -1,0 +1,7 @@
+.header_inventory_list table thead > tr > th {
+background-color: #7Bd3EA !important;
+color: white !important;
+text-align: center !important;
+}
+.header_inventory_list table thead > tr > th:nth-child(2) {
+width: 250px !important;

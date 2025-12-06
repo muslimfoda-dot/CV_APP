@@ -1,0 +1,11 @@
+<odoo>
+    <record id="cv_app_report" model="ir.actions.report">
+        <field name="name">inventory report</field>
+        <field name="model">app_one</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="binding_model_id" ref="model_app_one"/>
+        <field name="binding_type">report</field>
+        <field name="report_name">app_one.cv_app_report_template</field>
+    </record>
+    <template id="cv_app_report_template"></template>
+</odoo>

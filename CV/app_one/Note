@@ -1,0 +1,16 @@
+ def _action_merge_pickings(self):
+        if len(self) < 2:
+            raise UserError(("Please select at least two orders to merge"))
+
+        partners =self.mapped('partner_id')
+        if len(partners) > 1:
+            raise UserError(("Cannot merge orders from different customers"))
+
+        picking_typs = self.mapped('picking_type_id')
+        if len(picking_typs) > 1:
+            raise UserError(("Cannot merge delivery orders from different warehouses"))
+
+        new_picking = self[0].copy({
+            'origin':','.join(self.mapped('origin')),
+            'move_ids':[],
+        })

@@ -1,0 +1,58 @@
+<odoo>
+   <record id="owner_view_list" model="ir.ui.view">
+        <field name="name">owner list</field>
+        <field name="model">owner</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="address"/>
+            </list>
+        </field>
+    </record>
+
+
+    <record id="owner_view_form" model="ir.ui.view">
+        <field name="name">owner form</field>
+        <field name="model">owner</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                          <field name="name"/>
+                          <field name="name_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="phone"/>
+                            <field name="address"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="owner_action" model="ir.actions.act_window">
+        <field name="name">owner action</field>
+        <field name="res_model">owner</field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</odoo>

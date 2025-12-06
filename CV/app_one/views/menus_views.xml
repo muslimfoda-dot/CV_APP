@@ -1,0 +1,12 @@
+<odoo>
+    <menuitem id="cv_app_root_menu"              name="CV App"           web_icon="app_one,static/description/icon.png"/>
+    <menuitem id="cv_app_root_menu_inventory"    name="inventory"         parent="cv_app_root_menu"/>
+    <menuitem id="cv_app_root_menu_owner"        name="owner"             parent="cv_app_root_menu"/>
+    <menuitem id="cv_app_root_menu_owner_action" name="owner"             parent="cv_app_root_menu_owner"     action="owner_action"/>
+    <menuitem id="inventory_ment_item"           name="inventory"         parent="cv_app_root_menu_inventory" action="inventory_action"/>
+    <menuitem id="reserved_filed"                name="reserved"          parent="cv_app_root_menu_owner"     action="reserved_filed_action"/>
+    <menuitem id="tag_ment_item"                 name="tag"               parent="cv_app_root_menu_owner"     action="tag_action"/>
+    <menuitem id="history_ment_item"             name="history inventory" parent="cv_app_root_menu_owner"     action="history_action"/>
+
+
+</odoo>

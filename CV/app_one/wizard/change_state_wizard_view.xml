@@ -1,0 +1,28 @@
+<odoo>
+    <record id="change_state_wizard" model="ir.ui.view">
+        <field name="name">change state wizard form</field>
+        <field name="model">change_state</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="cv_app" invisible="1"/>
+                        <field name="state" required="1"/>
+                        <field name="reason" required="1"/>
+                    </group>
+                    <footer>
+                        <button string="confirm" type="object" name="action_confirm" class="btn-primary"/>
+                        <button string="Cancel" special="cancel" class="btn-secondary "/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+
+    </record>
+    <record id="change_state_action" model="ir.actions.act_window">
+        <field name="name"> change state</field>
+        <field name="res_model">change_state</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

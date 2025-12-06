@@ -1,0 +1,45 @@
+<odoo>
+    <record id="reserved_filed_view_list" model="ir.ui.view">
+        <field name="name">reserved filed list</field>
+        <field name="model">reserved_filed</field>
+        <field name="arch" type="xml">
+            <list class="header_inventory_list">
+                <field name="description"/>
+                <field name="code"/>
+            </list>
+        </field>
+    </record>
+
+
+    <record id="reserved_filed_view_form" model="ir.ui.view">
+        <field name="name">reserved filed</field>
+        <field name="model">reserved_filed</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <group>
+                        <field name="code"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+                <chatter class="oe_chatter">
+                    <field name="message_follower_ids" widget="mali_follower"/>
+                    <field name="message_ids" widget="mali_thread"/>
+                    <field name="activity_ids" widget="mali_activity"/>
+                </chatter>
+            </form>
+
+        </field>
+    </record>
+
+
+
+
+
+    <record id="reserved_filed_action" model="ir.actions.act_window">
+        <field name="name">reserved filed action</field>
+        <field name="res_model">reserved_filed</field>
+    </record>
+
+</odoo>
